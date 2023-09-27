@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2? family= Roboto:wght@300 & display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ..............CSS INICIO..............*/
+.container .head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px;
+    z-index: 100000;
+}
+
+.container .head img {
+    width: 13%;
+}
+
+.container .head a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #e50914;
+    padding: 8px 18px;
+    border-radius: 5px;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*bordes de pantalla oscuro*/
+.banner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background: linear-gradient(to bottom, #000, transparent);
+}
+
+.banner:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background: linear-gradient(to top, #000, transparent);
+}
+
+
+.banner .fit {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.banner .box-titulo {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.banner .box-titulo .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner .box-titulo .heading h2 {
+    font-size: 60px;
+    color: #000;
+    letter-spacing: 2px;
+    width: 80%;
+}
+
+.banner .box-titulo .heading p {
+    font-size: 1.625 rem;
+    color: #000;
+    font-weight: 500;
+    padding: 15px 0;
+    padding-bottom: 20px;
+}
+
+.banner .box-titulo .buscar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .box-titulo .buscar input {
+    font-size: 16px;
+    border: 1px solid #8c8c8c;
+    outline: none;
+    color: #000;
+    border-radius: 4px;
+    padding: 10px 10px 0 0;
+    min-width: 400px;
+    height: 60px;
+    align-items: center;
+}
+
+.banner .box-titulo .buscar a {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    border-radius: 2px;
+    background: #e50914;
+    box-shadow: 0 1px 0 rgb(0, 0, 0, 0.45);
+    font-size: 1.625rem;
+    height: 60px;
+    min-width: 310px;
+    padding: 15px;
+}
+
+/*..........CSS PERSONAJES..............*/
+
+.body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+}
+
+
+.box {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) ;
+   width: 1200px;
+   margin: 0 auto;
+
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:before, .card:after{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 4px;
+background: #fff;
+z-index: -1;
+}
+
+.card:hover:after{
+    transform: rotate(10deg);
+    box-shadow: 0 2px 20px rgba(0, 0, 0,0.2);
+}
+
+.card:hover:before{
+    transform: rotate(20deg);
+    box-shadow: 0 2px 20px rgba(0, 0, 0,0.2);
+}
+
+.card .imgbx {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background: #222;
+}
+
+.card .imgbx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .details {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    height: 60px;
+    text-align: center;
+}
+
+.card .details h2{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+
+.card .details h2 span{
+    font-weight: 500;
+    font-size: 16px;
+    color: #252323;
+    margin-top: 5px;
+}
+
+/*...............CSS FOOTER.............*/
+
+footer{
+    background-color: #111;
+}
+
+.footercontainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialicons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialicons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialicons a i{
+    font-size: 2rem;
+    color: #000;
+    opacity: 0.9;
+}
+
+.socialicons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialicons a:hover i{
+    color: #fff;
+    transition: 0.5s;
+}
+
+.footernav{
+    margin: 30px 0;
+}
+
+.footernav ul{
+    display: flex;
+    justify-content: center;
+}
+
+.footernav ul li a{
+    color: #fff;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    opacity: o.7;
+    transition: 0.5s;
+}
+
+.footerbottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerbottom p{
+    color: #fff;
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0 5px;
+}
+
+@media(max-width: 700px){
+    
+}
